@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
+import Portofolio from "./components/Portofolio";
+import Clients from "./components/Clients";
+import Footer from "./components/Footer";
+import Services from "./components/Services";
+import Whywe from "./components/Whywe";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className="App">
+        <Whywe/>
+        <Services/>
+        <Portofolio />
+        <Clients/>
+        <Footer/>
+      </div>
+    </ThemeProvider>
   );
 }
 
