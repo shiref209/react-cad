@@ -57,16 +57,20 @@ const Clients = () => {
   const theme = useTheme();
   return (
     <Box bgcolor={theme.palette.secondary.dark}>
-      <Container>
+      <Container maxWidth={false} sx={{ maxWidth: "1200px" }}>
         <Box
           display="flex"
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
           gap="30px"
-          p='50px 0'
+          p="50px 0"
         >
-          <Typography color={theme.palette.primary.main} variant="h1" fontWeight="700">
+          <Typography
+            color={theme.palette.primary.main}
+            variant="h1"
+            fontWeight="700"
+          >
             OUR CLIENTS
           </Typography>
           <Rectangle color="light" />
@@ -80,6 +84,7 @@ const Clients = () => {
                   justifyContent="center"
                   height="155px"
                   width="180px"
+                  borderRadius="15px"
                 >
                   <img src={item.img} alt={item.title} />
                 </Box>

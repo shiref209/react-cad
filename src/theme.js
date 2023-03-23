@@ -1,7 +1,27 @@
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
+  components: {
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          margin:'5px 10px',
+          padding:'0 10px',
+          borderRadius:'15px',
+          '&:hover': {
+            background:"linear-gradient(102.92deg, #1B004E 16.54%, #72068F 65.06%, #4E0E8B 85.68%)", 
+            color:"#FFFFFF"
+          },
+        },
+      },
+    },
+  },
   palette: {
+  //   action: {
+  //     selected: '#E7A615',
+  //     hover: '#FFD371',
+  //     disabled: '#9B9B9B'
+  // },
     primary: {
       main: "#1C0050",
       light: "#C637A0",

@@ -7,7 +7,7 @@ const Footer = () => {
   const theme = useTheme();
   return (
     <Box sx={{ background: theme.palette.gradient.main }}>
-      <Container>
+      <Container maxWidth={false} sx={{ maxWidth: "1200px" }}>
         <Box display="flex" flexDirection="row" gap="180px">
           {/* Logo */}
           <Box
@@ -108,25 +108,31 @@ const Footer = () => {
                   SOCIAL NETWORKS
                 </Typography>
                 {/* Icons Container */}
-                <Box display="flex" flexDirection="row" gap="10px" justifyContent='flex-end' marginTop='10px'>
+                <Box
+                  display="flex"
+                  flexDirection="row"
+                  gap="10px"
+                  justifyContent="flex-end"
+                  marginTop="10px"
+                >
                   <img
                     src="../../../images/icons/linkedin icon.png"
                     alt="linkedin icon"
-                    height='20px'
-                    width='20px'
+                    height="20px"
+                    width="20px"
                   />
                   <img
                     src="../../../images/icons/fb icon.png"
                     alt="facebook icon"
-                    height='20px'
-                    width='20px'
+                    height="20px"
+                    width="20px"
                   />
 
                   <img
                     src="../../../images/icons/instagram icon.png"
                     alt="instagram icon"
-                    height='20px'
-                    width='20px'
+                    height="20px"
+                    width="20px"
                   />
                 </Box>
               </Box>

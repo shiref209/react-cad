@@ -7,7 +7,7 @@ const Whywe = () => {
   const theme = useTheme();
   return (
     <Box sx={{ background: theme.palette.secondary.dark }}>
-      <Container maxWidth="80%">
+      <Container maxWidth={false} sx={{ maxWidth: "1200px" }}>
         <Box
           margin="0 5%"
           display="flex"
@@ -55,6 +55,8 @@ const Whywe = () => {
               gap="10px"
               alignItems="center"
               flexWrap="wrap"
+              // justifyContent={{xs:'center', md:'flex-end', lg:'flex-start' }}
+              justifyContent="center"
             >
               <Box
                 height="180px"
@@ -94,6 +96,7 @@ const Whywe = () => {
               gap="10px"
               alignItems="center"
               flexWrap="wrap"
+              justifyContent="center"
             >
               <Box
                 height="180px"
@@ -127,20 +130,19 @@ const Whywe = () => {
             </Box>
           </Box>
           {/* Dotted line */}
-      
         </Box>
       </Container>
       <Box
-          sx={{
-            borderTop: `2px dotted ${theme.palette.secondary.dark}`,
-            
-            backgroundImage: `linear-gradient(white, white), ${theme.palette.gradient.main}`,
-            backgroundOrigin: "border-box",
-            backgroundClip: "padding-box, border-box",
-            width:'100%',
-            height:'2px'
-          }}
-          ></Box>
+        sx={{
+          borderTop: `2px dotted ${theme.palette.secondary.dark}`,
+
+          backgroundImage: `linear-gradient(white, white), ${theme.palette.gradient.main}`,
+          backgroundOrigin: "border-box",
+          backgroundClip: "padding-box, border-box",
+          width: "100%",
+          height: "2px",
+        }}
+      ></Box>
     </Box>
   );
 };
