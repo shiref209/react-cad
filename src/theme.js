@@ -17,11 +17,7 @@ export const theme = createTheme({
     },
   },
   palette: {
-  //   action: {
-  //     selected: '#E7A615',
-  //     hover: '#FFD371',
-  //     disabled: '#9B9B9B'
-  // },
+
     primary: {
       main: "#1C0050",
       light: "#C637A0",
@@ -45,11 +41,11 @@ export const theme = createTheme({
     fontSize: 12,
     h1: {
       fontFamily: ["Khula", "sans-serif"].join(","),
-      fontSize: 40,
+      fontSize: {xs:32,md:40},
     },
     h2: {
       fontFamily: ["Khula", "sans-serif"].join(","),
-      fontSize: 32,
+      fontSize: {xs:24,md:32},
     },
     h3: {
       fontFamily: ["Khula", "sans-serif"].join(","),

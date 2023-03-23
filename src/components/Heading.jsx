@@ -1,8 +1,9 @@
 import React from "react";
-import HeadBar from "./HeadBar";
+// import HeadBar from "../UI/New";
 import { Box, Typography, Container, useTheme } from "@mui/material";
 import UiButton from "../UI/UiButton";
 import New from "../UI/New";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 
 const Heading = () => {
@@ -31,9 +32,12 @@ const Heading = () => {
     },
   ];
   return (
-    <Box sx={{ background: theme.palette.gradient.main }}>
+    <Box sx={{ background: theme.palette.gradient.main, position:'relative' }}>
+
+
       <Container maxWidth={false} sx={{ maxWidth: "1200px" }}>
-        <New/>
+        <New />
+        
 
         <Box
           display="flex"
@@ -60,6 +64,7 @@ const Heading = () => {
             },
           }}
         >
+      
           {/* Content */}
           <Box
             display="flex"
@@ -84,7 +89,7 @@ const Heading = () => {
               WEB DEVELOPMENT <br /> STUDIO
             </Typography>
             {/* Box of colors */}
-            <Box display="flex" flexDirection="row" gap="20px">
+            <Box display="flex" flexDirection="row" gap="20px" flexWrap={{xs:"wrap",xl:"nowrap"}}>
               {colors_box.map((item, index) => (
                 <Box
                   key={index}
@@ -93,7 +98,7 @@ const Heading = () => {
                   justifyContent="center"
                   bgcolor={item.background}
                   height="80px"
-                  width="80px"
+                  minWidth="80px"
                   borderRadius="10px"
                   border={item.border ? item.border : null}
                 >
@@ -101,6 +106,7 @@ const Heading = () => {
                     textAlign="center"
                     variant="h6"
                     color={theme.palette.secondary.main}
+                    flex='1'
                   >
                     {item.text}
                   </Typography>
@@ -142,13 +148,15 @@ const Heading = () => {
               display="flex"
               flexDirection="column"
             >
-              <Box display="flex" flexDirection="row">
+              <Box display="flex" flexDirection={{xs:'column', md:'row'}} alignItems={{xs:'center' ,md:'flex-start'}}>
                 <Typography
                   variant="h2"
                   fontWeight="700"
                   color={theme.palette.secondary.main}
-                  padding="40px 0"
-                >
+                  padding={{
+                    xs:"10px 0",
+                    md:"40px 0"
+                  }}                >
                   WEBSITE
                 </Typography>
                 <Typography
@@ -156,7 +164,13 @@ const Heading = () => {
                   fontWeight="700"
                   marginLeft="10px"
                   color={theme.palette.accentOrange.main}
-                  padding="40px 0"
+                  padding={{
+                    xs:"10px 0",
+                    md:"40px 0"
+                  }}
+                  marginBottom={{
+                    xs:"20px",md:"0"
+                  }}
                 >
                   DEVELOPMENT
                 </Typography>
@@ -165,7 +179,7 @@ const Heading = () => {
             </Box>
           </Box>
           {/* Main photo */}
-          <Box display="flex" flexDirection="column">
+          <Box display="flex" flexDirection="column" justifyContent={{xs:'center' , lg:'space-around'}}>
             <Box>
               <img
                 src="../../../images/Computer 1.png"
@@ -173,7 +187,7 @@ const Heading = () => {
                 width="100%"
               />
             </Box>
-            <Box display="flex" flexDirection="row" alignItems='center' justifyContent='center' gap='20px'>
+            <Box display="flex" flexDirection={{xs:'column', md:'row'}} alignItems='center' justifyContent='center' gap='20px'>
               {/* TEXT with 2 colors */}
               <Box display="flex" flexDirection="row">
                 <Typography

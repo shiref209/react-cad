@@ -55,7 +55,7 @@ const Services = () => {
           {/* Icons */}
 
           <Box display="flex" flexDirection="row" gap="10px" flexWrap='wrap' alignItems="center"
-          justifyContent="center">
+          justifyContent="center" flex='1' >
             {iconsData.map((item, index) => (
               <Box
                 display="flex"
